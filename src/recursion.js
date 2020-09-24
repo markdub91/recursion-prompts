@@ -39,9 +39,9 @@ var arraySum = function(array) {
       copy.pop();
       return arraySum(copy);
     }
-    return (copy[copy.length - 1].pop() + arraySum(copy));
+    return (parseInt(copy[copy.length - 1].pop()) + arraySum(copy));
   }
-  return (copy.pop() + arraySum(copy));
+  return (parseInt(copy.pop()) + arraySum(copy));
 };
 
 // 4. Check if a number is even.
