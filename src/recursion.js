@@ -77,15 +77,19 @@ var sumBelow = function(n) {
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
+  if (increment === undefined {
+    var result = [];
+  })
   if (x >= y) {
     var increment = -1;
   } else if (x < y) {
     var increment = 1;
   }
   if (x === y) {
-    return 0;
+    return result;
   }
-  return (x + increment) + sumBelow(n + increment);
+  result.push(x + increment);
+  return sumBelow(x + increment);
 };
 
 // 7. Compute the exponent of a number.
@@ -97,7 +101,9 @@ var exponent = function(base, exp) {
   if (exp === 0) {
     return 1;
   }
-  var counter = 0;
+  if (counter === undefined) {
+    var counter = 0;
+  }
   counter++;
   if (counter === exp) {
     return base;
@@ -112,8 +118,10 @@ var exponent = function(base, exp) {
 var powerOfTwo = function(n) {
   if (n === 1) {
     return true;
+  } else if (n < 1 && n > 0) {
+    return false;
   }
-  return n / 2;
+  return powerOfTwo(n / 2);
 };
 
 // 9. Write a function that reverses a string.
