@@ -29,7 +29,7 @@ var sum = function(array) {
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
   if (copy === undefined) {
-    var copy = array.slice();
+    var copy = JSON.parse(JSON.stringify(array));
   };
   if (copy.length === 0) {
     return 0;
