@@ -35,6 +35,10 @@ var arraySum = function(array) {
     return 0;
   }
   if (Array.isArray(copy[copy.length -1]) === true) {
+    if (copy[copy.length - 1].length === 0) {
+      copy.pop();
+      return arraySum(copy);
+    }
     return (copy[copy.length - 1].pop() + arraySum(copy));
   }
   return (copy.pop() + arraySum(copy));
